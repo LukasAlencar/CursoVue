@@ -1,6 +1,6 @@
 <template>
     <div>
-        <PrimeiroComponente />
+        <PrimeiroComponente/>
         <p>O dado de App é {{testando}}</p>
         <LifeCycle />
         <Pessoa />
