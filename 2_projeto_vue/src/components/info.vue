@@ -13,7 +13,7 @@
             <button @click="showEmail">Ver e-mail</button>
         </div>
         <p  v-show="mostrarEmail">Mande uma mensagem para: {{ email }}</p>
-        <p>Para acessar meu portifólio <a target="_blanck" v-bind:href="meuLink">basta clicar aqui</a></p>
+        <p class="teste">Para acessar meu portifólio <a target="_blanck" v-bind:href="meuLink">basta clicar aqui</a></p>
         <Picture/>
     </div>
 </template>
@@ -42,5 +42,7 @@ export default {
 </script>
 
 <style>
- 
+    .teste{
+        background-color: black;
+    }
 </style>
