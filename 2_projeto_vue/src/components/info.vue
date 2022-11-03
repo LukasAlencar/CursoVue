@@ -13,7 +13,7 @@
             </li>
         </ul>
         <div>
-            <button @click="showEmail">Ver e-mail</button>
+            <button id="textoBotao" @click="showEmail">{{ textoBotao }}</button>
         </div>
         <p  v-show="mostrarEmail">Mande uma mensagem para: {{ email }}</p>
         <p class="teste">Para acessar meu portifólio <a target="_blanck" v-bind:href="meuLink">basta clicar aqui</a></p>
@@ -28,9 +28,10 @@ export default {
     data() {
         return {
             estaTrabalhando: true,
-            mostrarEmail: false,
+            mostrarEmail: true,
             email: "testeemail@asda.com",
             meuLink: "https://google.com.br",
+            textoBotao: "Esconder E-mail",
             backendTechnologies: ['JavaScript', 'PHP', "Phyton"],
             frontEndTechnologies: [
                 {id: 1, language: 'HTML'},
@@ -43,6 +44,11 @@ export default {
     methods: {
         showEmail(){
             this.mostrarEmail = !this.mostrarEmail;
+            if(!this.mostrarEmail){
+                this.textoBotao = "Mostrar E-mail";
+            }else{
+                this.textoBotao = "Esconder E-mail";
+            }
         }
        
     }
